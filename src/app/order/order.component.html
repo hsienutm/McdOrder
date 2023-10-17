@@ -1,0 +1,45 @@
+<img class="img" src="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-logo.jpg" >
+<h2 class="title">Welcome To McDonald's</h2>
+<div>
+    <h4>Click For New Order Now!</h4>
+    <button class="button" (click)="createOrder('Normal')">New Normal Order</button>
+    <button class="button" (click)="createOrder('VIP')">New VIP Order</button>
+</div>
+
+<div class="statusBar">
+    <div class="col1">
+        <p class="text">Pending Orders</p>
+        <div *ngFor="let pendingOrders of pendingOrders;index as i ">
+            <!-- <div>Order {{i+1}}</div> -->
+            <div>Id: {{pendingOrders.id}}</div>
+            <div>Type: {{pendingOrders.type}}</div>
+            <div style="padding-bottom: 10px;">Status: {{pendingOrders.status}}</div>
+        </div>
+    </div>
+    <div class="col2">
+        <p class="text">Processing Orders</p>
+        <p>Available Bot: {{bot.length}}</p>
+        <button class="button" (click)="createBot()">+Bot</button>
+        <button class="button" (click)="destroyBot()">-Bot</button>
+        <div>
+            <div *ngFor="let processingOrders of processingOrders; index as i ">
+                <!-- <div>Order {{i+1}}</div> -->
+                <div>Id: {{processingOrders.id}}</div>
+                <div>Type: {{processingOrders.type}}</div>
+                <div style="padding-bottom: 10px;">Status: {{processingOrders.status}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col3">
+        <p class="text">Completed Orders</p>
+        <div>
+            <div *ngFor="let completedOrder of completedOrders; index as i ">
+                <!-- <div>Order {{i+1}}</div> -->
+                <div>Id: {{completedOrder.id}}</div>
+                <div>Type: {{completedOrder.type}}</div>
+                <div style="padding-bottom: 10px;">Status: {{completedOrder.status}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

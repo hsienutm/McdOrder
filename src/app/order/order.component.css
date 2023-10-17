@@ -1,0 +1,50 @@
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+.button{
+    padding: 10px;
+    margin-right: 20px;
+}
+.title{
+    text-align: center;
+    padding-bottom: 14px;
+}
+.statusBar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+.text{
+    border: 3px;
+    border-style: solid;
+    border-color: darkslategrey;
+    padding: 1em;
+}
+
+
+.col1{
+    text-align: center;
+    background-color:  #FDFD96;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 10px;
+}
+.col2{
+    text-align: center;
+    background-color: #89CFF0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 10px;
+}
+.col3{
+    text-align: center;
+    background-color: #D1FFBD;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding: 10px;
+}
